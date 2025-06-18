@@ -1,0 +1,318 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Main container */
+.subject-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header styles */
+.subject-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.subject-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Update button section */
+.update-section {
+    padding: 20px 30px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.update-btn {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.update-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* Assessment sections */
+.assessment-section {
+    padding: 30px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.assessment-section:last-child {
+    border-bottom: none;
+}
+
+.assessment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Question cards */
+.question-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.question-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.question-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Question headers */
+.question-header {
+    font-size: 1.3rem;
+    color: #495057;
+    margin-bottom: 15px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+/* Question text */
+.question-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #6c757d;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+/* CO information */
+.co-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.co-value, .co-level {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.co-value {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+}
+
+.co-level {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #212529;
+}
+
+.co-label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.co-data {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 1.8rem;
+    color: #495057;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 3px solid #667eea;
+    font-weight: 600;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.question-input {
+    width: 100%;
+}
+
+.question-input textarea,
+.question-input input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.question-input textarea:focus,
+.question-input input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* CO input groups */
+.co-input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.co-input-group input,
+.co-input-group select {
+    padding: 10px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.co-input-group input:focus,
+.co-input-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* Update co-info for form layout */
+.co-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+/* Style for Django form errors */
+.errorlist {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.errorlist li {
+    color: #dc3545;
+    font-size: 0.875rem;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+}
+
+/* Form validation styles */
+.question-input textarea.error,
+.question-input input.error,
+.co-input-group input.error,
+.co-input-group select.error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .assessment-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .subject-title {
+        font-size: 2rem;
+    }
+    
+    .co-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .question-card {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .subject-header {
+        padding: 20px;
+    }
+    
+    .subject-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .assessment-section {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,408 @@
+/* co_form.css - CO Requirements Form Styles */
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Container */
+.co-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Container */
+.co-form-container {
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.co-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+/* Page Header */
+.co-page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.co-page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+}
+
+.co-main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styles */
+.co-form {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Form Field Container */
+.co-form-field {
+    width: 100%;
+    max-width: 400px;
+    background: #f8f9fc;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #e1e5e9;
+    position: relative;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.co-form-field::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 0 0 2px 2px;
+}
+
+.co-form-field:hover {
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Field Label */
+.co-field-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 20px 0;
+    line-height: 1.4;
+    position: relative;
+}
+
+.co-field-label::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 1px;
+}
+
+/* Input Container */
+.co-input-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Input Field */
+.co-input-container input {
+    width: 100%;
+    padding: 18px 24px;
+    border: 3px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: white;
+    transition: all 0.3s ease;
+    color: #2d3748;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.co-input-container input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+    transform: scale(1.02);
+}
+
+.co-input-container input:hover {
+    border-color: #cbd5e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.co-input-container input::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Custom Number Controls */
+.co-input-container::after {
+    content: '🎯';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Submit Button Container */
+.co-submit-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Submit Button */
+.co-submit-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 18px 60px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 200px;
+}
+
+.co-submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.co-submit-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+}
+
+.co-submit-button:hover::before {
+    left: 100%;
+}
+
+.co-submit-button:active {
+    transform: translateY(-2px);
+}
+
+/* Icon Enhancement */
+.co-submit-button::after {
+    content: '→';
+    margin-left: 8px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.co-submit-button:hover::after {
+    transform: translateX(4px);
+}
+
+/* Validation States */
+.co-input-container input:valid {
+    border-color: #48bb78;
+    background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+}
+
+.co-input-container input:invalid:not(:placeholder-shown) {
+    border-color: #f56565;
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+/* Help Text */
+.co-help-text {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .co-container {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+    
+    .co-form-container {
+        border-radius: 12px;
+    }
+    
+    .co-page-header {
+        padding: 30px 20px;
+    }
+    
+    .co-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .co-form {
+        padding: 30px 25px;
+        gap: 25px;
+    }
+    
+    .co-form-field {
+        padding: 25px 20px;
+    }
+    
+    .co-field-label {
+        font-size: 1rem;
+    }
+    
+    .co-input-container input {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+    
+    .co-submit-button {
+        padding: 15px 50px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .co-container {
+        padding: 10px;
+        padding-top: 20px;
+    }
+    
+    .co-page-header {
+        padding: 25px 15px;
+    }
+    
+    .co-main-title {
+        font-size: 1.5rem;
+    }
+    
+    .co-form {
+        padding: 25px 15px;
+    }
+    
+    .co-form-field {
+        padding: 20px 15px;
+    }
+    
+    .co-input-container input {
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+    
+    .co-submit-button {
+        padding: 12px 40px;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}
+
+/* Loading State */
+.co-submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.co-submit-button:disabled::before {
+    display: none;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Indicators */
+.co-submit-button:focus-visible {
+    outline: 3px solid #667eea;
+    outline-offset: 3px;
+}
+
+.co-input-container input:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .co-submit-container {
+        display: none;
+    }
+    
+    .co-form-container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .co-page-header {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+    }
+}

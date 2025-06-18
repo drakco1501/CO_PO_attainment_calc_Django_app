@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Back Button */
+.back-button {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.btn-back {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Tables Wrapper */
+.tables-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Table Section */
+.table-section {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+}
+
+/* Table Title */
+.table-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Data Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-table thead th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background: #f8f9fc;
+}
+
+.data-table tbody tr:hover {
+    background: #e6f3ff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-section {
+        flex: 1 1 100%;
+    }
+
+    .table-title {
+        font-size: 1.2rem;
+    }
+
+    .data-table {
+        font-size: 0.9rem;
+    }
+
+    .btn-back {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,18 @@
+{% load static %}
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="{% url 'home' %}" class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
+            </a>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'questions' %}">IA_Q's</a></li>
+                <li><a href="{% url 'marks' %}">Marks</a></li>
+                <li><a href="{% url 'attainment' %}">Attainment</a></li>
+            </ul>
+            <!-- Logout Button -->
+            <a href="{% url 'user_logout' %}" class="logout-btn">Logout</a>
+        </div>
+    </nav>
