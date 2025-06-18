@@ -1,0 +1,80 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/marks_update.css' %}">
+{% endblock links %}
+
+{% block content %}
+<div class="container">
+    <div class="form-container">
+        <div class="student-info-header">
+            <h1 class="student-info-title">
+                Update Marks for {{ student.student_name }}
+                <br>
+                <small style="font-size: 0.7em; opacity: 0.9;">Roll Number: {{ student.roll_number }}</small>
+            </h1>
+        </div>
+
+        <form method="POST" action="{% url 'marks_update' student.id %}" class="marks-form">
+            {% csrf_token %}
+            
+            <!-- IA1 Section -->
+            <div class="form-section">
+                <h2 class="ia-section-title">Internal Assessment 1 (IA1)</h2>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA1 Question 1A</h3>
+                    <div>{{ form.IA1_1a }}</div>
+                </div>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA1 Question 1B</h3>
+                    <div>{{ form.IA1_1b }}</div>
+                </div>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA1 Question 2A</h3>
+                    <div>{{ form.IA1_2a }}</div>
+                </div>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA1 Question 2B</h3>
+                    <div>{{ form.IA1_2b }}</div>
+                </div>
+            </div>
+
+            <!-- IA2 Section -->
+            <div class="form-section">
+                <h2 class="ia-section-title">Internal Assessment 2 (IA2)</h2>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA2 Question 1A</h3>
+                    <div>{{ form.IA2_1a }}</div>
+                </div>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA2 Question 1B</h3>
+                    <div>{{ form.IA2_1b }}</div>
+                </div>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA2 Question 2A</h3>
+                    <div>{{ form.IA2_2a }}</div>
+                </div>
+                
+                <div class="form-field">
+                    <h3 class="field-label">IA2 Question 2B</h3>
+                    <div>{{ form.IA2_2b }}</div>
+                </div>
+            </div>
+
+            <div class="submit-container">
+                <input type="submit" value="Update Marks" class="submit-button">
+                <a href="{% url 'marks' %}" class="submit-button" style="background: gray;">back</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

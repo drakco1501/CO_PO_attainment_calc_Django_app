@@ -1,0 +1,64 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock links %}
+
+{% block content %}
+{% if messages %}
+<br><br>
+<div class="messages">
+    {% for message in messages %}
+        <div class="message">
+            <center>
+                <h2>{{ message }}</h2> 
+            </center>
+        </div>
+    {% endfor %}
+</div>
+<br><br>
+{% endif %}
+<div class="homecontainer">
+    <div class="section">
+        <div class="image">
+            <img src="{% static 'img/home1.png' %}" alt="Placeholder Image 1" class="img">
+        </div>
+        <div class="text">
+            <p>Welcome to our innovative CO-PO mapping platform designed specifically for colleges and universities. 
+                This platform provides an intuitive way to calculate and visualize the alignment between Course 
+                Outcomes (CO) and Program Outcomes (PO). By streamlining the complex process of educational outcome 
+                mapping, our website helps institutions enhance their curriculum's
+                    effectiveness, ensuring it aligns with the objectives of higher education accreditation bodies.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="image">
+            <img src="{% static 'img/home2.png' %}" alt="Placeholder Image 2" class="img">
+        </div>
+        <div class="text">
+            <p>Our website empowers educators with easy-to-use tools to map, calculate, and analyze the relationship 
+                between COs and POs for each course. Simply input the relevant data, and the system will provide a 
+                clear matrix, graphical insights, and comprehensive reports. This data-driven approach allows 
+                departments to assess the contribution of each course toward achieving 
+                the program's overall objectives, making it easier to identify strengths and areas for improvement.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="image">
+            <img src="{% static 'img/home3.png' %}" alt="Placeholder Image 3" class="img">
+        </div>
+        <div class="text">
+            <p>Built with educators in mind, the platform is user-friendly, secure, 
+                and adaptable to diverse academic structures. Whether you are an administrator overseeing program 
+                alignment or a faculty member ensuring your course objectives meet program goals, this website provides 
+                the precision and clarity you need. 
+                Join us in transforming academic assessments with technology tailored for the future of education.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

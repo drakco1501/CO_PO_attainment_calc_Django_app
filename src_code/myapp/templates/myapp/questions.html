@@ -1,0 +1,146 @@
+{% extends "main.html" %}
+
+{% load static %}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/question.css' %}">
+
+{% endblock links %}
+
+
+
+{% block content %}
+
+<div class="subject-container">
+
+    <!-- Update Button Section -->
+    <div class="update-section">
+        <a href="{% url 'update_questions' %}">
+            <button class="update-btn">Alter</button>
+        </a>
+    </div>
+
+    <!-- Internal Assessment 1 Section -->
+    <div class="assessment-section">
+        <div class="assessment-grid">
+            <!-- IA1 Question 1A -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 1: Question 1A</h3>
+                <div class="question-text">
+                    {{subject.IA1_1a_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA1_1a_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IA1 Question 1B -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 1: Question 1B</h3>
+                <div class="question-text">
+                    {{subject.IA1_1b_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA1_1b_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IA1 Question 2A -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 1: Question 2A</h3>
+                <div class="question-text">
+                    {{subject.IA1_2a_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA1_2a_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IA1 Question 2B -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 1: Question 2B</h3>
+                <div class="question-text">
+                    {{subject.IA1_2b_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA1_2b_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Internal Assessment 2 Section -->
+    <div class="assessment-section">
+        <div class="assessment-grid">
+            <!-- IA2 Question 1A -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 2: Question 1A</h3>
+                <div class="question-text">
+                    {{subject.IA2_1a_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA2_1a_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IA2 Question 1B -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 2: Question 1B</h3>
+                <div class="question-text">
+                    {{subject.IA2_1b_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA2_1b_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IA2 Question 2A -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 2: Question 2A</h3>
+                <div class="question-text">
+                    {{subject.IA2_2a_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA2_2a_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IA2 Question 2B -->
+            <div class="question-card">
+                <h3 class="question-header">Internal Assessment 2: Question 2B</h3>
+                <div class="question-text">
+                    {{subject.IA2_2b_que}}
+                </div>
+                <div class="co-info">
+                    <div class="co-value">
+                        <div class="co-label">CO Value</div>
+                        <div class="co-data">{{subject.IA2_2b_co_val}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

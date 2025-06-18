@@ -1,0 +1,240 @@
+{% extends "main.html" %}
+
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/attainment.css' %}">
+
+{% endblock links %}
+
+
+{% block content %}
+
+<div class="container">
+    <header class="page-header">
+        <h1 class="main-title">Course Outcome Attainment</h1>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="table-section">
+            <div class="table-container">
+                <table class="attainment-table">
+                    <thead class="table-header">
+                        <tr class="header-row">
+                            <th class="co-header">CO_VALUE</th> 
+                            <th class="po-header">PO1</th> 
+                            <th class="po-header">PO2</th> 
+                            <th class="po-header">PO3</th> 
+                            <th class="po-header">PO4</th> 
+                            <th class="po-header">PO5</th> 
+                            <th class="po-header">PO6</th> 
+                            <th class="po-header">PO7</th> 
+                            <th class="po-header">PO8</th> 
+                            <th class="po-header">PO9</th> 
+                            <th class="po-header">PO10</th> 
+                            <th class="po-header">PO11</th> 
+                            <th class="po-header">PO12</th> 
+                            <th class="pso-header">PSO1</th> 
+                            <th class="pso-header">PSO2</th> 
+                            <th class="pso-header">PSO3</th> 
+                            <th class="pso-header">PSO4</th> 
+                            <th class="action-header">Actions</th> 
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        {% if count >= 1 %}
+                            <tr class="data-row co-row">
+                                <td class="co-value">CO1</td>
+                                <td class="po-value">{{Co1.po1}}</td>
+                                <td class="po-value">{{Co1.po2}}</td> 
+                                <td class="po-value">{{Co1.po3}}</td> 
+                                <td class="po-value">{{Co1.po4}}</td> 
+                                <td class="po-value">{{Co1.po5}}</td> 
+                                <td class="po-value">{{Co1.po6}}</td> 
+                                <td class="po-value">{{Co1.po7}}</td> 
+                                <td class="po-value">{{Co1.po8}}</td> 
+                                <td class="po-value">{{Co1.po9}}</td> 
+                                <td class="po-value">{{Co1.po10}}</td> 
+                                <td class="po-value">{{Co1.po11}}</td> 
+                                <td class="po-value">{{Co1.po12}}</td> 
+                                <td class="pso-value">{{Co1.pso1}}</td> 
+                                <td class="pso-value">{{Co1.pso2}}</td> 
+                                <td class="pso-value">{{Co1.pso3}}</td> 
+                                <td class="pso-value">{{Co1.pso4}}</td>
+                                <td class="action-cell">
+                                    <a href="{% url 'update_co' co_val=1 %}" class="update-btn">Update</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+                        
+                        {% if count >= 2 %}
+                            <tr class="data-row co-row">
+                                <td class="co-value">CO2</td>
+                                <td class="po-value">{{Co2.po1}}</td>
+                                <td class="po-value">{{Co2.po2}}</td> 
+                                <td class="po-value">{{Co2.po3}}</td> 
+                                <td class="po-value">{{Co2.po4}}</td> 
+                                <td class="po-value">{{Co2.po5}}</td> 
+                                <td class="po-value">{{Co2.po6}}</td> 
+                                <td class="po-value">{{Co2.po7}}</td> 
+                                <td class="po-value">{{Co2.po8}}</td> 
+                                <td class="po-value">{{Co2.po9}}</td> 
+                                <td class="po-value">{{Co2.po10}}</td> 
+                                <td class="po-value">{{Co2.po11}}</td> 
+                                <td class="po-value">{{Co2.po12}}</td> 
+                                <td class="pso-value">{{Co2.pso1}}</td> 
+                                <td class="pso-value">{{Co2.pso2}}</td> 
+                                <td class="pso-value">{{Co2.pso3}}</td> 
+                                <td class="pso-value">{{Co2.pso4}}</td>
+                                <td class="action-cell">
+                                    <a href="{% url 'update_co' co_val=2 %}" class="update-btn">Update</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+
+                        {% if count >= 3 %}
+                            <tr class="data-row co-row">
+                                <td class="co-value">CO3</td>
+                                <td class="po-value">{{Co3.po1}}</td>
+                                <td class="po-value">{{Co3.po2}}</td> 
+                                <td class="po-value">{{Co3.po3}}</td> 
+                                <td class="po-value">{{Co3.po4}}</td> 
+                                <td class="po-value">{{Co3.po5}}</td> 
+                                <td class="po-value">{{Co3.po6}}</td> 
+                                <td class="po-value">{{Co3.po7}}</td> 
+                                <td class="po-value">{{Co3.po8}}</td> 
+                                <td class="po-value">{{Co3.po9}}</td> 
+                                <td class="po-value">{{Co3.po10}}</td> 
+                                <td class="po-value">{{Co3.po11}}</td> 
+                                <td class="po-value">{{Co3.po12}}</td> 
+                                <td class="pso-value">{{Co3.pso1}}</td> 
+                                <td class="pso-value">{{Co3.pso2}}</td> 
+                                <td class="pso-value">{{Co3.pso3}}</td> 
+                                <td class="pso-value">{{Co3.pso4}}</td>
+                                <td class="action-cell">
+                                    <a href="{% url 'update_co' co_val=3 %}" class="update-btn">Update</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+
+                        {% if count >= 4 %}
+                            <tr class="data-row co-row">
+                                <td class="co-value">CO4</td>
+                                <td class="po-value">{{Co4.po1}}</td>
+                                <td class="po-value">{{Co4.po2}}</td> 
+                                <td class="po-value">{{Co4.po3}}</td> 
+                                <td class="po-value">{{Co4.po4}}</td> 
+                                <td class="po-value">{{Co4.po5}}</td> 
+                                <td class="po-value">{{Co4.po6}}</td> 
+                                <td class="po-value">{{Co4.po7}}</td> 
+                                <td class="po-value">{{Co4.po8}}</td> 
+                                <td class="po-value">{{Co4.po9}}</td> 
+                                <td class="po-value">{{Co4.po10}}</td> 
+                                <td class="po-value">{{Co4.po11}}</td> 
+                                <td class="po-value">{{Co4.po12}}</td> 
+                                <td class="pso-value">{{Co4.pso1}}</td> 
+                                <td class="pso-value">{{Co4.pso2}}</td> 
+                                <td class="pso-value">{{Co4.pso3}}</td> 
+                                <td class="pso-value">{{Co4.pso4}}</td>
+                                <td class="action-cell">
+                                    <a href="{% url 'update_co' co_val=4 %}" class="update-btn">Update</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+
+                        {% if count >= 5 %}
+                            <tr class="data-row co-row">
+                                <td class="co-value">CO5</td>
+                                <td class="po-value">{{Co5.po1}}</td>
+                                <td class="po-value">{{Co5.po2}}</td> 
+                                <td class="po-value">{{Co5.po3}}</td> 
+                                <td class="po-value">{{Co5.po4}}</td> 
+                                <td class="po-value">{{Co5.po5}}</td> 
+                                <td class="po-value">{{Co5.po6}}</td> 
+                                <td class="po-value">{{Co5.po7}}</td> 
+                                <td class="po-value">{{Co5.po8}}</td> 
+                                <td class="po-value">{{Co5.po9}}</td> 
+                                <td class="po-value">{{Co5.po10}}</td> 
+                                <td class="po-value">{{Co5.po11}}</td> 
+                                <td class="po-value">{{Co5.po12}}</td> 
+                                <td class="pso-value">{{Co5.pso1}}</td> 
+                                <td class="pso-value">{{Co5.pso2}}</td> 
+                                <td class="pso-value">{{Co5.pso3}}</td> 
+                                <td class="pso-value">{{Co5.pso4}}</td>
+                                <td class="action-cell">
+                                    <a href="{% url 'update_co' co_val=5 %}" class="update-btn">Update</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+
+                        {% if count >= 6 %}
+                            <tr class="data-row co-row">
+                                <td class="co-value">CO6</td>
+                                <td class="po-value">{{Co6.po1}}</td>
+                                <td class="po-value">{{Co6.po2}}</td> 
+                                <td class="po-value">{{Co6.po3}}</td> 
+                                <td class="po-value">{{Co6.po4}}</td> 
+                                <td class="po-value">{{Co6.po5}}</td> 
+                                <td class="po-value">{{Co6.po6}}</td> 
+                                <td class="po-value">{{Co6.po7}}</td> 
+                                <td class="po-value">{{Co6.po8}}</td> 
+                                <td class="po-value">{{Co6.po9}}</td> 
+                                <td class="po-value">{{Co6.po10}}</td> 
+                                <td class="po-value">{{Co6.po11}}</td> 
+                                <td class="po-value">{{Co6.po12}}</td> 
+                                <td class="pso-value">{{Co6.pso1}}</td> 
+                                <td class="pso-value">{{Co6.pso2}}</td> 
+                                <td class="pso-value">{{Co6.pso3}}</td> 
+                                <td class="pso-value">{{Co6.pso4}}</td>
+                                <td class="action-cell">
+                                    <a href="{% url 'update_co' co_val=6 %}" class="update-btn">Update</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+                        
+                        {% if count == 7 %}
+                            <tr class="data-row co-row">
+                                <td class="co-value">CO7</td>
+                                <td class="po-value">{{Co7.po1}}</td>
+                                <td class="po-value">{{Co7.po2}}</td> 
+                                <td class="po-value">{{Co7.po3}}</td> 
+                                <td class="po-value">{{Co7.po4}}</td> 
+                                <td class="po-value">{{Co7.po5}}</td> 
+                                <td class="po-value">{{Co7.po6}}</td> 
+                                <td class="po-value">{{Co7.po7}}</td> 
+                                <td class="po-value">{{Co7.po8}}</td> 
+                                <td class="po-value">{{Co7.po9}}</td> 
+                                <td class="po-value">{{Co7.po10}}</td> 
+                                <td class="po-value">{{Co7.po11}}</td> 
+                                <td class="po-value">{{Co7.po12}}</td> 
+                                <td class="pso-value">{{Co7.pso1}}</td> 
+                                <td class="pso-value">{{Co7.pso2}}</td> 
+                                <td class="pso-value">{{Co7.pso3}}</td> 
+                                <td class="pso-value">{{Co7.pso4}}</td>
+                                <td class="action-cell">
+                                    <a href="{% url 'update_co' co_val=7 %}" class="update-btn">Update</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="clear-section">
+            <div class="clear-container">
+                <h2 class="clear-title">Clear CO Requirement Value</h2>
+                <a href="{% url 'clear_co' %}" class="clear-btn">Clear All Data</a>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <div class="action-container">
+                <a href="{% url 'calculate' %}" class="calculate-link">
+                    <button class="calculate-btn" type="button">Get Attainment</button>
+                </a>
+            </div>
+        </section>
+    </main>
+</div>
+{% endblock content %}
+

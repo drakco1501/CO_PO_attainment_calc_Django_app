@@ -1,0 +1,175 @@
+{% extends "main.html" %}
+
+{% load static %}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/question.css' %}">
+
+{% endblock links %}
+
+{% block content %}
+
+<div class="subject-container">
+    <!-- Form wrapper -->
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- Update Button Section -->
+        <div class="update-section">
+            <button type="submit" class="update-btn">Update Questions</button>
+            <a href="{% url 'questions' %}">
+                <button type="button" class="update-btn" style="background: linear-gradient(45deg, #6c757d, #5a6268);">Back</button>
+            </a>
+        </div>
+
+        <!-- Internal Assessment 1 Section -->
+        <div class="assessment-section">
+            <h2 class="section-title">Internal Assessment 1</h2>
+            <div class="assessment-grid">
+                <!-- IA1 Question 1A -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 1: Question 1A</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA1_1a_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA1_1a_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA1_1a_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA1_1a_co_val }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA1 Question 1B -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 1: Question 1B</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA1_1b_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA1_1b_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA1_1b_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA1_1b_co_val }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA1 Question 2A -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 1: Question 2A</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA1_2a_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA1_2a_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA1_2a_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA1_2a_co_val }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA1 Question 2B -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 1: Question 2B</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA1_2b_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA1_2b_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA1_2b_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA1_2b_co_val }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Internal Assessment 2 Section -->
+        <div class="assessment-section">
+            <h2 class="section-title">Internal Assessment 2</h2>
+            <div class="assessment-grid">
+                <!-- IA2 Question 1A -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 2: Question 1A</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA2_1a_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA2_1a_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA2_1a_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA2_1a_co_val }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA2 Question 1B -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 2: Question 1B</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA2_1b_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA2_1b_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA2_1b_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA2_1b_co_val }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA2 Question 2A -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 2: Question 2A</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA2_2a_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA2_2a_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA2_2a_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA2_2a_co_val }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA2 Question 2B -->
+                <div class="question-card">
+                    <h3 class="question-header">Internal Assessment 2: Question 2B</h3>
+                    <div class="form-group">
+                        <label for="{{ form.IA2_2b_que.id_for_label }}" class="form-label">Question:</label>
+                        <div class="question-input">
+                            {{ form.IA2_2b_que }}
+                        </div>
+                    </div>
+                    <div class="co-info">
+                        <div class="co-input-group">
+                            <label for="{{ form.IA2_2b_co_val.id_for_label }}" class="co-label">CO Value</label>
+                            {{ form.IA2_2b_co_val }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/marks.css' %}">
+{% endblock links %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1 class="page-title">Student Marks Dashboard</h1>
+        <p class="page-subtitle">Internal Assessment Marks Overview</p>
+    </div>
+
+    {% if stu_count == 0 %}
+        <div class="no-data-message">
+            <h3>No Student Data Available!</h3>
+        </div>
+    {% else %}
+        <div class="table-container">
+            <table class="student-table">
+                <thead>
+                    <tr>
+                        <th>SL-NO</th>
+                        <th>Student Name</th>
+                        <th>Roll Number</th>
+                        <th>IA1_1a</th>
+                        <th>IA1_1b</th>
+                        <th>IA1_2a</th>
+                        <th>IA1_2b</th>
+                        <th>IA2_1a</th>
+                        <th>IA2_1b</th>
+                        <th>IA2_2a</th>
+                        <th>IA2_2b</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td class="serial-number">{{ forloop.counter }}</td>
+                        <td class="student-name">{{ student.student_name }}</td>
+                        <td class="roll-number">{{ student.roll_number }}</td>
+                        <td class="marks-cell">{{ student.IA1_1a }}</td>
+                        <td class="marks-cell">{{ student.IA1_1b }}</td>
+                        <td class="marks-cell">{{ student.IA1_2a }}</td>
+                        <td class="marks-cell">{{ student.IA1_2b }}</td>
+                        <td class="marks-cell">{{ student.IA2_1a }}</td>
+                        <td class="marks-cell">{{ student.IA2_1b }}</td>
+                        <td class="marks-cell">{{ student.IA2_2a }}</td>
+                        <td class="marks-cell">{{ student.IA2_2b }}</td>
+                        <td class="action-cell">
+                            <button class="update-button">
+                                <a href="{% url 'marks_update' student.id %}" class="update-link">Update</a>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+</div>
+{% endblock content %}

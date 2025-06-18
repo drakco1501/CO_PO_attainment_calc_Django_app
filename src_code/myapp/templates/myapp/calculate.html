@@ -1,0 +1,74 @@
+{% extends "main.html" %}
+
+{% load static %}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/calculate.css' %}">
+
+{% endblock links %}
+
+
+{% block content %}
+<div class="container">
+    <div class="back-button">
+        <a href="{% url 'attainment' %}">
+            <button class="btn btn-back">Back</button>
+        </a>
+    </div>
+
+    <div class="tables-wrapper">
+        <!-- CO Attainment Table -->
+        <div class="table-section">
+            <h2 class="table-title">CO Attainment</h2>
+            <table class="data-table co-table">
+                <thead>
+                    <tr>
+                        <th>CO Value</th>
+                        <th>CO Attainment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>CO1</td><td>{{ co1_attainment }}</td></tr>
+                    <tr><td>CO2</td><td>{{ co2_attainment }}</td></tr>
+                    <tr><td>CO3</td><td>{{ co3_attainment }}</td></tr>
+                    <tr><td>CO4</td><td>{{ co4_attainment }}</td></tr>
+                    <tr><td>CO5</td><td>{{ co5_attainment }}</td></tr>
+                    <tr><td>CO6</td><td>{{ co6_attainment }}</td></tr>
+                    <tr><td>CO7</td><td>{{ co7_attainment }}</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- PO/PSO Attainment Table -->
+        <div class="table-section">
+            <h2 class="table-title">PO and PSO Attainment</h2>
+            <table class="data-table po-table">
+                <thead>
+                    <tr>
+                        <th>PO/PSO Value</th>
+                        <th>PO Attainment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>PO1</td><td>{{ po1 }}</td></tr>
+                    <tr><td>PO2</td><td>{{ po2 }}</td></tr>
+                    <tr><td>PO3</td><td>{{ po3 }}</td></tr>
+                    <tr><td>PO4</td><td>{{ po4 }}</td></tr>
+                    <tr><td>PO5</td><td>{{ po5 }}</td></tr>
+                    <tr><td>PO6</td><td>{{ po6 }}</td></tr>
+                    <tr><td>PO7</td><td>{{ po7 }}</td></tr>
+                    <tr><td>PO8</td><td>{{ po8 }}</td></tr>
+                    <tr><td>PO9</td><td>{{ po9 }}</td></tr>
+                    <tr><td>PO10</td><td>{{ po10 }}</td></tr>
+                    <tr><td>PO11</td><td>{{ po11 }}</td></tr>
+                    <tr><td>PO12</td><td>{{ po12 }}</td></tr>
+                    <tr><td>PSO1</td><td>{{ pso1 }}</td></tr>
+                    <tr><td>PSO2</td><td>{{ pso2 }}</td></tr>
+                    <tr><td>PSO3</td><td>{{ pso3 }}</td></tr>
+                    <tr><td>PSO4</td><td>{{ pso4 }}</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{% load static %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/attainment_update.css' %}">
+{% endblock links %}
+
+{% block content %}
+<h1>Update CO{{ val }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-grid">
+        <!-- Example of rendering form fields as individual elements -->
+        <div>
+            <div class="form-item">{{ form.po1.label_tag }} {{ form.po1 }}</div>
+            <div class="form-item">{{ form.po2.label_tag }} {{ form.po2 }}</div>
+            <div class="form-item">{{ form.po3.label_tag }} {{ form.po3 }}</div>
+            <div class="form-item">{{ form.po4.label_tag }} {{ form.po4 }}</div>
+        </div>
+        <div>
+            <div class="form-item">{{ form.po5.label_tag }} {{ form.po5 }}</div>
+            <div class="form-item">{{ form.po6.label_tag }} {{ form.po6 }}</div>
+            <div class="form-item">{{ form.po7.label_tag }} {{ form.po7 }}</div>
+            <div class="form-item">{{ form.po8.label_tag }} {{ form.po8 }}</div>
+        </div>
+        <div>
+            <div class="form-item">{{ form.po9.label_tag }} {{ form.po9 }}</div>
+            <div class="form-item">{{ form.po10.label_tag }} {{ form.po10 }}</div>
+            <div class="form-item">{{ form.po11.label_tag }} {{ form.po11 }}</div>
+            <div class="form-item">{{ form.po12.label_tag }} {{ form.po12 }}</div>
+        </div>
+        <div>
+            <div class="form-item">{{ form.pso1.label_tag }} {{ form.pso1 }}</div>
+            <div class="form-item">{{ form.pso2.label_tag }} {{ form.pso2 }}</div>
+            <div class="form-item">{{ form.pso3.label_tag }} {{ form.pso3 }}</div>
+            <div class="form-item">{{ form.pso4.label_tag }} {{ form.pso4 }}</div>
+        </div>
+
+    </div>
+    <div class="button-row">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+    </div>
+</form>
+{% endblock content %}
